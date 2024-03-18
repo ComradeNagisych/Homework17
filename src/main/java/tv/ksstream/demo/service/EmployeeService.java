@@ -42,12 +42,13 @@ public class EmployeeService {
         }
         return employee;
     }
-    public void findEmployee (String firstName, String lastName) {
+    public Employee findEmployee (String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
         if (employees.contains(employee)) {
             System.out.println("Сотрудник " + firstName + " " + lastName + " найден");
         } else {
             throw new EmployeeNotFoundException();
         }
+        return employee;
     }
 }
